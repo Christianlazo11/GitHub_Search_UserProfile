@@ -54,7 +54,7 @@ const card = ({ dataUser }) => {
               <p className="text-xs">{dataUser?.location}</p>
             </div>
             <div className="flex gap-3">
-              <FaBuilding />
+              <TbLink />
               <a
                 href={dataUser?.html_url}
                 target="_blank"

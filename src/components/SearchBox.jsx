@@ -5,7 +5,7 @@ const SearchBox = ({ handleQueryTerm, error, setError }) => {
   const [value, setValue] = useState("");
   return (
     <>
-      <div className="bg-blue pl-5 pr-2 py-2 flex gap-5 justify-between items-center rounded-xl text-white ">
+      <div className="bg-blue pl-5 pr-2 py-2 flex gap-5 justify-between items-center rounded-xl text-white">
         <div className="flex justify-center items-center gap-3 w-full">
           <BsSearch className="text-blueLight" />
           <input
