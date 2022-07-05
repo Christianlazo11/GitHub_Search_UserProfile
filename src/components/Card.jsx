@@ -44,7 +44,7 @@ const card = ({ dataUser }) => {
             <p className="text-lg">{dataUser?.following}</p>
           </div>
         </div>
-        <div className="flex justify-between md:gap-3 ">
+        <div className="flex flex-col gap-3 md:flex-row justify-between md:gap-3">
           <div className="flex flex-col justify-between gap-3">
             <div className="flex gap-3">
               <IoLocationSharp />

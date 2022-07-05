@@ -14,17 +14,19 @@ const CardContent = () => {
   };
 
   useEffect(() => {
-    console.log(queryTerm);
-    fetch(API_URL + queryTerm)
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        setDataUser(data);
-      });
+    if (queryTerm) {
+      console.log(queryTerm);
+      fetch(API_URL + queryTerm)
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log(data);
+          setDataUser(data);
+        });
+    }
   }, [queryTerm]);
 
   return (
-    <div className="flex flex-col gap-5 sm:w-[29rem] md:w-[33rem] lg:w-[40rem] px-5">
+    <div className="flex flex-col gap-5 w-full sm:w-[29rem] md:w-[33rem] lg:w-[40rem] px-5">
       <ThemeContent />
       <SearchBox handleQueryTerm={handleQueryTerm} />
       <Card dataUser={dataUser} />
