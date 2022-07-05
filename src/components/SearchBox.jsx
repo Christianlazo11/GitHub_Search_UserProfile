@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
-const SearchBox = ({ handleQueryTerm }) => {
+const SearchBox = ({ handleQueryTerm, error, setError }) => {
   const [value, setValue] = useState("");
-  const [error, setError] = useState("");
   return (
     <>
       <div className="bg-blue pl-5 pr-2 py-2 flex gap-5 justify-between items-center rounded-xl text-white ">

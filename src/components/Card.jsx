@@ -21,7 +21,9 @@ const card = ({ dataUser }) => {
         <div className="w-3/4 flex flex-col mb-5 md:gap-4 md:my-3">
           <div className="flex flex-col md:flex-row justify-between pl-6 md:pl-0">
             <h2 className="text-2xl">{dataUser?.name}</h2>
-            <span className="text-stone-400">joined 25 jan 2011</span>
+            <span className="text-stone-400">
+              {dataUser.created_at.slice(0, 10)}
+            </span>
           </div>
           <p className="pl-6 md:pl-0 text-blueLight">{dataUser?.login}</p>
         </div>

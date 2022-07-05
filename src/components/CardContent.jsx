@@ -8,6 +8,7 @@ const API_URL = "https://api.github.com/users/";
 const CardContent = () => {
   const [queryTerm, setQueryTerm] = useState("christianlazo2020");
   const [dataUser, setDataUser] = useState();
+  const [error, setError] = useState("");
 
   const handleQueryTerm = (data) => {
     setQueryTerm(data);
@@ -19,8 +20,16 @@ const CardContent = () => {
       fetch(API_URL + queryTerm)
         .then((resp) => resp.json())
         .then((data) => {
-          console.log(data);
-          setDataUser(data);
+          if (data.message) {
+            console.log(data.message);
+            setError("User Not Found");
+          } else {
+            setDataUser(data);
+            console.log(data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
         });
     }
   }, [queryTerm]);
@@ -28,7 +37,11 @@ const CardContent = () => {
   return (
     <div className="flex flex-col gap-5 w-full sm:w-[29rem] md:w-[33rem] lg:w-[40rem] px-5">
       <ThemeContent />
-      <SearchBox handleQueryTerm={handleQueryTerm} />
+      <SearchBox
+        handleQueryTerm={handleQueryTerm}
+        error={error}
+        setError={setError}
+      />
       <Card dataUser={dataUser} />
     </div>
   );
