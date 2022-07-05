@@ -1,6 +1,7 @@
 import React from "react";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaTwitter, FaBuilding } from "react-icons/fa";
+import { TbLink } from "react-icons/tb";
 import imageGit from "../assets/github.png";
 
 const card = ({ dataUser }) => {
@@ -22,7 +23,7 @@ const card = ({ dataUser }) => {
           <div className="flex flex-col md:flex-row justify-between pl-6 md:pl-0">
             <h2 className="text-2xl">{dataUser?.name}</h2>
             <span className="text-stone-400">
-              {dataUser.created_at.slice(0, 10)}
+              {dataUser?.created_at?.slice(0, 10)}
             </span>
           </div>
           <p className="pl-6 md:pl-0 text-blueLight">{dataUser?.login}</p>
