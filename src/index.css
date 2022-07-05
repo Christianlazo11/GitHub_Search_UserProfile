@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .btn-blue{
+        @apply bg-blueLight text-white rounded-md py-2 px-3 text-sm transition ease-in-out delay-150;
+    }
+
+}
