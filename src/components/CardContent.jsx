@@ -6,7 +6,7 @@ import ThemeContent from "./ThemeContent";
 const API_URL = "https://api.github.com/users/";
 
 const CardContent = () => {
-  const [queryTerm, setQueryTerm] = useState("christianlazo2020");
+  const [queryTerm, setQueryTerm] = useState("octocat");
   const [dataUser, setDataUser] = useState();
   const [error, setError] = useState("");
 
