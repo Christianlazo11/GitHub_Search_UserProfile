@@ -7,6 +7,9 @@
 ## TECHNOLOGIES
 
 - React
+- Api Context
+- Hooks
 - Tailwind css
+- Mode Dark and Light
 
 ## Deploy https://searchusersgithub2050.netlify.app/
