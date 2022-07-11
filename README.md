@@ -2,7 +2,7 @@
 
 ## Preview
 
-[![searhuser.png](https://i.postimg.cc/d37Kvyvb/searhuser.png)](https://postimg.cc/wRdrQ312)
+[![usersgithub.png](https://i.postimg.cc/fb9VBJ6R/usersgithub.png)](https://postimg.cc/cKd1J4xp)
 
 ## TECHNOLOGIES
 
